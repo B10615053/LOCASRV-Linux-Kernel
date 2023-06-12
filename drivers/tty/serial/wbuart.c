@@ -247,7 +247,7 @@ static int wbuart_console_setup(struct console *co, char *options)
 static void wbuart_console_write(struct console *co, const char *s, unsigned int count)
 {
 	unsigned long flags;
-	struct uart_port *port = wbuart_ports[co->index]
+	struct uart_port *port = wbuart_ports[co->index];
 
 	if (!port)
 		return;
