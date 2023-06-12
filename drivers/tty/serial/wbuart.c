@@ -292,7 +292,8 @@ static int wbuart_probe(struct platform_device *pdev)
 
 	if (pdev->id < 0) 
 	{
-		for (int id = 0; id < WBUART_MAX_PORTS; id++) 
+		int id = 0;
+		for (id = 0; id < WBUART_MAX_PORTS; id++) 
 		{
 			if (!wbuart_ports[id]) 
 			{
